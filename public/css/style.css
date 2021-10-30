@@ -1,0 +1,71 @@
+/* Variables */
+
+:root {
+    --backnavy: #3f5277;
+    --backlight: #D7E5F0;
+
+}
+
+/* Body styling */
+
+body {
+    background-color: var(--backlight);
+}
+
+/* Header styling */
+
+header {
+    color: var(--backlight);
+    background-color: var(--backnavy)
+}
+
+h1 {
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+
+/* Nav bar styling */
+
+nav {
+    padding: 20px;
+    margin-left: 25px;
+    display: flex;
+    
+}
+
+nav a {
+    margin-right: 20px;
+    font-size: large;
+}
+
+/* Form styling */
+
+form {
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border: 1px solid var(--backnavy);
+    padding: 20px;
+}
+
+
+/* Entry card styling */
+
+.entry-card {
+    color: var(--backnavy);
+    background-color: var(--backlight);
+    margin-top: 25px;
+    margin-left: 25px; 
+    padding-top: 5px;
+    border: 1px solid var(--backnavy);
+}
+
+/* .entry-card-title {
+    color: var(--backlight);
+    background-color: var(--backnavy);
+    padding-top: 20px;
+    padding-left:
+   
+
+} */
+

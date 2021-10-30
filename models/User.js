@@ -8,6 +8,7 @@ class User extends Model {
     }
 }
 
+// Defines the properties of a user
 User.init(
     {
         id: {
@@ -51,4 +52,5 @@ User.init(
     }
 );
 
+// Exports User for use in other files
 module.exports = User;

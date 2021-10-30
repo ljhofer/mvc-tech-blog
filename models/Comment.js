@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 
 class Comment extends Model {}
 
+// Defines the properties of a comment
 Comment.init (
     {
         id:{
@@ -12,7 +13,7 @@ Comment.init (
             autoIncrement: true,
         },
         comment_text:{
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
         },
         user_id:{
@@ -39,4 +40,5 @@ Comment.init (
     }
 );
 
+// Exports Comment for use in other files
 module.exports = Comment;

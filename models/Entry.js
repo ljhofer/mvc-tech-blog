@@ -3,6 +3,7 @@ const sequelize = require("../config/connection");
 
 class Entry extends Model {}
 
+// Defines the properties of an entry
 Entry.init (
     {
         id:{
@@ -36,4 +37,5 @@ Entry.init (
     }
 );
 
+// Exports Entry for use in other files
 module.exports = Entry;
