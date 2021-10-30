@@ -4,21 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width={device-width}, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+
     <title>Tech Blog</title>
 </head>
 <body>
-    {{!-- Header with NAV Bar --}}
+
+    <!-- Header with NAV Bar -- -->
     <header>
+        <!-- Partial that changes when you log in?? -->
         <nav>
             <a href="">Home</a>
             <a href="">Dashboard</a>
             <a href="">Log In</a>
-            <a href="">Log Out</a>
         </nav>
 
-
+        <!-- Partial that changes when you go into your dashboard -->
+        <h1>The Tech Blog</h1>
     </header>
+    
+    {{{ body }}}
 
+
+
+
+    <div>
+        <button id= "start-new-entry-button" type="submit" class="btn btn-primary">Add New Entry</button>
+    </div>
     
 </body>
 </html>
