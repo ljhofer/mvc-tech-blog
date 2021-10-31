@@ -27,7 +27,7 @@ router.get("/", async (req, res) => {
 });
 
 
-// TODO: Display a single page and add comment?? Redirect to login
+// Displays a single entry by id
 router.get('/entries/:id', async (req, res) => {
     try {
       const entryData = await Entry.findByPk(req.params.id, {

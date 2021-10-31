@@ -8,7 +8,13 @@ router.get("/", withAuth, (req, res) => {
     Entry.findAll({
         where: {
             user_id: req.session.user_id
-        }
+        },
+        include: [
+            {
+                model: User,
+                attributes: ["username"],
+            },
+        ],
     })
     .then(allMyEntries => {
         const myEntries = allMyEntries.map((entry) => entry.get ({ plain:true }));
@@ -22,36 +28,20 @@ router.get("/", withAuth, (req, res) => {
 });
 
 
-
-
-
-// TODO: See all your entries
-// router.get("/", async (req, res) => {
-//     try {
-//        // Gets all entries and joins with user data
-//        const entryData = await Entry.findAll({
-//            include: [
-//                {
-//                    model: User,
-//                    attributes: ["username"],
-//                },
-//            ],
-//        });
-       
-//        // Serializes data to pass to Handlebars
-//        const entries = entryData.map((entry) => entry.get ({ plain:true }));
-
-//        res.render("allentries", { entries });
-//    } catch (err) {
-//        console.log(err);
-//        res.status(500).json(err);
-//    }
-// });
-
-
 // TODO: See a single entry -- edit or delete
 
-
+router.get("/entries/:id", async (req, res) => {
+    try {
+        const myEntryData = await Entry.findByPk(req.params.id, {
+            include: [
+              {
+                model: User,
+                attributes: ['username'],
+              },
+            ], 
+        }
+    )}    
+})
 
 
 

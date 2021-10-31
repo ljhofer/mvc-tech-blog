@@ -13,9 +13,7 @@ module.exports = router;
 
 // Page Routes // 
 
-// Dashboard Page -- see all your posts
 
-// Single entry/post
 
 // Add entry
 
