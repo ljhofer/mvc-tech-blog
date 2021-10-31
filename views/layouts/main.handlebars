@@ -14,11 +14,16 @@
 
     <!-- Header with NAV Bar -- -->
     <header>
-        <!-- Partial that changes when you log in?? -->
+        
         <nav>
-            <a href="">Home</a>
-            <a href="">Dashboard</a>
-            <a href="">Log In</a>
+            <a href="/">Home</a>
+            {{#if logged_in}}
+            <a href="/dashboard">Dashboard</a>
+            {{else}}
+            <a href="/login">Dashboard</a>
+            <a href="/login">Log In</a>
+            {{/if}}
+            <a href="/logout" id="logout-button">Log Out</a>
         </nav>
 
         <!-- Partial that changes when you go into your dashboard -->
@@ -33,6 +38,8 @@
     {{!-- <div>
         <button id= "start-new-entry-button" type="submit" class="btn btn-primary">Add New Entry</button>
     </div> --}}
+
+    <script src="./js/logout.js"></script>
     
 </body>
 </html>
