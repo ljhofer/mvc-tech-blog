@@ -1,12 +1,9 @@
 const router = require('express').Router();
 const { Entry } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 
 //check with mini-project
-
-
-
-// TODO: get by primary key and add
 
 
 // TODO: post a new routes 

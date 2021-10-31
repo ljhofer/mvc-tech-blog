@@ -1,0 +1,26 @@
+ <div class="card entry-card col-10">
+    <div class="card-body">
+        <h5 class="card-title entry-card-title">{{entry_title}}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Posted by {{user.username}} on {{createdAt}}</h6>
+        <p class="card-text">{{entry_text}}</p>
+    </div>
+</div>    
+
+{{#each comments as |comment|}}
+<div class="card entry-card col-10">
+    <div class="card-body">
+        <h6 class="card-subtitle mb-2 text-muted">Comment by {{comment.user_id}} on {{comment.createdAt}}</h6>
+        <p class="card-text">{{comment.comment_text}}</p>
+    </div>
+</div>            
+
+
+<form class= "col-10">
+    <div class="form-group">
+        <label for="formGroupExampleInput2">Add A Comment</label>
+        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Type comment Here">
+    </div>
+    <div>
+        <button id= "comment-submit-button" type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</form>

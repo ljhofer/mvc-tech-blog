@@ -13,8 +13,6 @@ const signupRequestHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace('/dashboard');
-    //   TODO: take this out later
-      console.log("Response ok");
     } else {
       alert(response.statusText);
     }

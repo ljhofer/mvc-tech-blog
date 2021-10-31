@@ -28,7 +28,32 @@ router.get("/", async (req, res) => {
 
 
 // TODO: Display a single page and add comment?? Redirect to login
-
+router.get('/entries/:id', async (req, res) => {
+    try {
+      const entryData = await Entry.findByPk(req.params.id, {
+        include: [
+          {
+            model: User,
+            attributes: ['username'],
+          },
+          {
+            model: Comment,
+            attributes: ['comment_text', "user_id", "created_at"],
+          },
+        ],
+      });
+  
+      const entry = entryData.get({ plain: true });
+      console.log(entry);
+      res.render('entrywithcomments', {
+        ...entry,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+  
 
 
 router.get('/login', (req, res) => {
@@ -42,8 +67,7 @@ router.get('/login', (req, res) => {
   });
   
 
-// TODO: User sign up route
-
+// Displays sign up HTML when user clicks sign up
 router.get("/signup", (req, res) => {
     res.render("signup");
 })
