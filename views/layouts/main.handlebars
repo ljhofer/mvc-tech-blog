@@ -11,8 +11,6 @@
     <title>Tech Blog</title>
 </head>
 <body>
-
-    <!-- Header with NAV Bar -- -->
     <header>
         
         <nav>
@@ -26,17 +24,14 @@
             <a href="/api/users/logout" id="logout-button">Log Out</a>
         </nav>
 
-        <!-- Partial that changes when you go into your dashboard -->
         <h1>The Tech Blog</h1>
     </header>
     
     {{{ body }}}
 
 
-
-
-
-    <script src="./js/logout.js"></script>
-    
+    {{!-- {{#if logged_in}} --}}
+    <script src="/js/logout.js"></script>
+    {{!-- {{/if}} --}}
 </body>
 </html>

@@ -74,25 +74,34 @@
 
 
         <!-- Add entry div (POST/Create entry route) -->
-               
+<h1>Hello</h1>               
         <form class= "col-10">
+            <h5>Add A New Blog Post</h5>
             <div class="form-group">
                 <label for="formGroupExampleInput">Title</label>
-                <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                <input type="text" class="form-control" id="formGroupExampleInput">
             </div>
             <div class="form-group">
                 <label for="formGroupExampleInput2">Content</label>
-                <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                <input type="text" class="form-control" id="formGroupExampleInput2">
             </div>
             <div>
                 <button id= "entry-submit-button" type="submit" class="btn btn-primary">Submit</button>
             </div>
         </form>
-
+<h1>End</h1>
 
         <!-- Update entry div (PUT/Update entry route) same as above but adds a delete button (DELETE/Destroy route)-->
 
-        <form class= "col-10">
+        <div class="card entry-card col-10">
+            <div class="card-body">
+                <h5 class="card-title entry-card-title">Entry title</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Poster and posted date</h6>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+        </div>    
+
+        <form class= "col-10" id="edit-entry-form">
             <div class="form-group">
                 <label for="formGroupExampleInput">Title</label>
                 <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">

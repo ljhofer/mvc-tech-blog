@@ -44,7 +44,7 @@ router.get('/entries/:id', async (req, res) => {
       });
   
       const entry = entryData.get({ plain: true });
-      console.log(entry);
+      
       res.render('entrywithcomments', {
         ...entry,
         logged_in: req.session.logged_in
@@ -64,7 +64,7 @@ router.get('/login', (req, res) => {
     }
   
     res.render('login');
-  });
+});
   
 
 // Displays sign up HTML when user clicks sign up

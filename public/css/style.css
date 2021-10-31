@@ -56,25 +56,21 @@ form {
     background-color: var(--backlight);
     margin-top: 25px;
     margin-left: 25px; 
+    margin-bottom: 25px;
     padding-top: 5px;
     border: 1px solid var(--backnavy);
 }
-
-/* .entry-card-title {
-    color: var(--backlight);
-    background-color: var(--backnavy);
-    padding-top: 20px;
-    padding-left:
-   
-
-} */
 
 
 /* Styling for button to create a new entry */
 
 #start-new-entry-button {
-    margin-top: 25px;
+    border: 2px solid var(--backnavy);
+    background-color: var(--backnavy);
+    color:var(--backlight);
+    margin-top: 75px;
     margin-left: 150px;
+    padding: 7px;
     font-size: large;
 }
 
