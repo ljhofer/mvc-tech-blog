@@ -2,16 +2,16 @@ const { User } = require('../models');
 
 const userData = [
   {
-    username: "techie22",
-    password: "asdfaef2423r4"
+    username: "lhofer",
+    password: "$2b$10$Ec1i4nh6QGREvF4ubRZ/v.YYzFidoRmidmE9QsxKSsgKRxAcwtNQC"
   },
   {
-    username: "dev27",
-    password: "asdI@@hf38"
+    username: "mhiner",
+    password: "$2b$10$DwElOqu44llXHh2m.ZkGjO2kbJsJfmh1wdgBy.CqHDyURppvyHnYO"
   },
   {
-    username: "computerlover",
-    password: "@*&YHFEHWR#"
+    username: "devminnie",
+    password: "$2b$10$4g1.VxO/nnkFHgBnHN1MDuws10LtdIw4PXY7xIlh/zFarTbo9F6dS"
   },
   
 ];
