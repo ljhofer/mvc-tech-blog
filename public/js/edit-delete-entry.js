@@ -23,26 +23,26 @@ const editEntryHandler = async (event) => {
   }
 };
 
-// const delButtonHandler = async (event) => {
-//   if (event.target.hasAttribute('data-id')) {
-//     const id = event.target.getAttribute('data-id');
+const deleteEntryHandler = async (event) => {
+  event.preventDefault();
 
-//     const response = await fetch(`/api/projects/${id}`, {
-//       method: 'DELETE',
-//     });
+  const entry_id = document.querySelector('#edit-entry-id').textContent;
+     
+  const response = await fetch(`/api/entries/${entry_id}`, {
+      method: 'DELETE',
+    });
 
-//     if (response.ok) {
-//       document.location.replace('/profile');
-//     } else {
-//       alert('Failed to delete project');
-//     }
-//   }
-// };
+  if (response.ok) {
+    document.location.replace('/dashboard');
+  } else {
+    alert('Failed to delete project');
+  }
+};
 
 document
   .querySelector('#edit-entry-form')
   .addEventListener('submit', editEntryHandler);
 
-// document
-//   .querySelector('.project-list')
-//   .addEventListener('click', delButtonHandler);
+document
+  .querySelector('.delete-button')
+  .addEventListener('click', deleteEntryHandler);
