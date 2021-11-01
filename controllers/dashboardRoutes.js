@@ -19,14 +19,13 @@ router.get("/", withAuth, (req, res) => {
     .then(allMyEntries => {
         const myEntries = allMyEntries.map((entry) => entry.get ({ plain:true }));
 
-        res.render("allmyentries", { myEntries });
+        res.render("allmyentries", { myEntries, logged_in: req.session.logged_in });
     })
     .catch (err => {
         console.log(err);
         res.status(500).json(err);
     }) 
 });
-
 
 // Displays a single entry by user who is logged in 
 router.get("/entries/:id", withAuth, async (req, res) => {
@@ -44,7 +43,7 @@ router.get("/entries/:id", withAuth, async (req, res) => {
 
         res.render("editentry", {
             ...myEntry,
-            loggin_in: req.session.logged_in 
+            logged_in: req.session.logged_in 
         });
     } catch (err) {
         res.status(500).json(err);
@@ -52,7 +51,7 @@ router.get("/entries/:id", withAuth, async (req, res) => {
 });
 
 router.get("/add", (req, res) => {
-    res.render("addentry");
+    res.render("addentry", {logged_in: req.session.logged_in});
 
 });
 
