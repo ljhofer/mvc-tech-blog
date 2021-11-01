@@ -39,12 +39,12 @@ router.get('/entries/:id', async (req, res) => {
           {
             model: Comment,
             attributes: ['comment_text', "user_id", "created_at"],
+            include: [User],
           },
         ],
       });
   
       const entry = entryData.get({ plain: true });
-      
       res.render('entrywithcomments', {
         ...entry,
         logged_in: req.session.logged_in

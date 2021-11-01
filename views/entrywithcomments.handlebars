@@ -10,7 +10,7 @@
 {{#each comments as |comment|}}
 <div class="card entry-card col-10">
     <div class="card-body">
-        <h6 class="card-subtitle mb-2 text-muted">Comment by {{comment.user_id}} on {{comment.created_at}}</h6>
+        <h6 class="card-subtitle mb-2 text-muted">Comment by {{comment.user.username}} on {{comment.created_at}}</h6>
         <p class="card-text">{{comment.comment_text}}</p>
     </div>
 </div>     
