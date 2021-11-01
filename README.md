@@ -37,7 +37,7 @@ Please contact me at <ljhofer@gmail.com> to discuss contributions.
 [Link to project's GitHub repo.](https://github.com/ljhofer/mvc-tech-blog)
 
 ## Technologies
-The program uses HTML, CSS, Bootstrap, JavaScript, Node, Express 
+The program uses HTML, CSS, Bootstrap, JavaScript, Node, Express, Sequelize, Express Handlebars, and MySQL.
 
 ## Questions
 Please email any questions to <ljhofer@gmail.com> or reference my [GitHub profile](https://github.com/ljhofer). 
