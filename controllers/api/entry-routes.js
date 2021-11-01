@@ -19,7 +19,7 @@ router.post('/', withAuth, async (req, res) => {
 
 
 // Updates an entry by id
-router.put('/:id', (req, res) => {
+router.put('/:id', withAuth, (req, res) => {
   Entry.update (req.body, {
     where: {
       id: req.params.id

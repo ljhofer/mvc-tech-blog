@@ -40,7 +40,7 @@ const editEntryHandler = async (event) => {
 // };
 
 document
-  .querySelector('#update-submit-button')
+  .querySelector('#edit-entry-form')
   .addEventListener('submit', editEntryHandler);
 
 // document
