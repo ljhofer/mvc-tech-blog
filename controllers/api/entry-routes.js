@@ -3,7 +3,7 @@ const { Entry } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
-// TODO: post a new routes 
+// Adds new blog entry to database
 router.post('/', withAuth, async (req, res) => {
     try {
       const newEntry = await Entry.create({
@@ -18,10 +18,20 @@ router.post('/', withAuth, async (req, res) => {
   });
 
 
-// TODO: put with id
+// Updates an entry by id
+router.put('/:id', (req, res) => {
+  Entry.update (req.body, {
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(updatedEntry => res.json(updatedEntry))
+  .catch(err => res.status(400).json(err));
+});
 
 
-// TODO: delete with id
+
+  // TODO: delete with id
 
 
 

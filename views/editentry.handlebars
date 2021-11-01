@@ -1,6 +1,7 @@
 
 <div class="card entry-card col-10">
     <div class="card-body">
+        <h5 id="edit-entry-id" class="hidden-id">{{id}}</h5>
         <h5 class="card-title entry-card-title">{{entry_title}}</h5>
         <h6 class="card-subtitle mb-2 text-muted">Posted by {{user.username}} on {{createdAt}}</h6>
         <p class="card-text">{{entry_text}}</p>
@@ -11,14 +12,16 @@
 <form class= "col-10" id="edit-entry-form">
      <div class="form-group">
             <label for="formGroupExampleInput">Edit Entry Title</label>
-            <input type="text" class="form-control" id="formGroupExampleInput">
+            <input type="text" class="form-control" id="edited-title">
     </div>
     <div class="form-group">
-        <label for="formGroupExampleInput2">Edit Entry Content</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2">
+        <label for="formGroupExampleInput2">Edit Entry Text</label>
+        <input type="text" class="form-control" id="edited-text">
     </div>
     <div>
         <button id= "update-submit-button" type="submit" class="btn btn-primary">Update</button>
-        <button id= "update-submit-button" type="submit" class="btn btn-primary">Delete</button>
+        <button id= "delete-submit-button" type="submit" class="btn btn-primary">Delete</button>
     </div>
 </form>
+
+<script src="/js/edit-delete-entry.js"></script>
