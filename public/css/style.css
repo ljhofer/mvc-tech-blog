@@ -77,3 +77,9 @@ form {
     font-size: large;
 }
 
+/* Styling for delete button */
+
+.delete-button {
+    margin-left: 75px;
+
+}

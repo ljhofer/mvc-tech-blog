@@ -30,28 +30,26 @@ router.put('/:id', withAuth, (req, res) => {
 });
 
 
-  // Deletes an entry by id
-  router.delete('/:id', withAuth, async (req, res) => {
-    try {
-      const entryData = await Entry.destroy({
-        where: {
-          id: req.params.id,
-          user_id: req.session.user_id,
-        },
-      });
+ // Deletes an entry by id
+router.delete('/:id', withAuth, async (req, res) => {
+  try {
+    const entryData = await Entry.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id,
+      },
+    });
   
-      if (!entryData) {
-        res.status(404).json({ message: 'No entry found with this id!' });
-        return;
-      }
-  
-      res.status(200).json(entryData);
-    } catch (err) {
-      res.status(500).json(err);
+    if (!entryData) {
+      res.status(404).json({ message: 'No entry found with this id!' });
+      return;
     }
-  });
-
-
+  
+    res.status(200).json(entryData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 module.exports = router;

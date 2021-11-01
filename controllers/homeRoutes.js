@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 
 // Displays all blog entries on page load
 router.get("/", async (req, res) => {
-     try {
+  try {
         // Gets all entries and joins with user data
         const entryData = await Entry.findAll({
             include: [
@@ -19,7 +19,7 @@ router.get("/", async (req, res) => {
         // Serializes data to pass to Handlebars
         const entries = entryData.map((entry) => entry.get ({ plain:true }));
 
-        res.render("allentries", { entries });
+        res.render("allentries", { entries, logged_in: req.session.logged_in });
     } catch (err) {
         console.log(err);
         res.status(500).json(err);
