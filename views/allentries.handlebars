@@ -1,9 +1,15 @@
-{{#each entries as |entry|}}
-    <div class="card entry-card col-10">
-        <div class="card-body">
-             <h5 class="card-title entry-card-title"><a href="/entries/{{entry.id}}">{{entry.entry_title}}</a></h5>
-             <h6 class="card-subtitle mb-2 text-muted">Posted by {{entry.user.username}} on {{entry.createdAt}}</h6>
-            <p class="card-text">{{entry.entry_text}}</p>
+<div>  
+    {{#each entries as |entry|}}
+        <div class="card entry-card col-10">
+            <div class="card-body">
+                {{#if ../logged_in}}
+                <h5 class="card-title entry-card-title"><a href="/entries/{{entry.id}}">{{entry.entry_title}}</a></h5>
+                {{else}}
+                <h5 class="card-title entry-card-title">{{entry.entry_title}}</h5>
+                {{/if}}
+                <h6 class="card-subtitle mb-2 text-muted">Posted by {{entry.user.username}} on {{entry.createdAt}}</h6>
+                <p class="card-text">{{entry.entry_text}}</p>
+            </div>
         </div>
-    </div>
-{{/each}}
+    {{/each}}
+</div> 

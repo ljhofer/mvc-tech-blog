@@ -18,7 +18,7 @@ router.get("/", async (req, res) => {
         
         // Serializes data to pass to Handlebars
         const entries = entryData.map((entry) => entry.get ({ plain:true }));
-
+        
         res.render("allentries", { entries, logged_in: req.session.logged_in });
     } catch (err) {
         console.log(err);
